@@ -2,7 +2,7 @@
 
 
 
-fetch('https://raw.githubusercontent.com/csslick/animal-info/master/animal.json')
+fetch('https://raw.githubusercontent.com/csslick/animal-mobile/main/animal-data.json')
     .then(function(res){
         return res.json(); // JSON 객체 변환
     })                
