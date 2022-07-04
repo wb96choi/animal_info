@@ -9,3 +9,5 @@ https://wb96choi.github.io/animal_info/
   - 서버(db) ---> 클라이언트
   - 자바스크립트 fetch API
   - 자바스크립트로 동물정보 출력
+
+  https://raw.githubusercontent.com/csslick/animal-mobile/main/animal-data.json
