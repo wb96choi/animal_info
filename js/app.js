@@ -36,3 +36,17 @@ fetch('https://raw.githubusercontent.com/csslick/animal-mobile/main/animal-data.
     
     
     });
+
+    /*
+        파라미터를 전달하여 요청하기
+        홈페이지주소name = 홍길동
+            매개변수(URL parameter) name = '홍길동'
+
+        index.html -> index.html?category=dog -> 
+        강아지 보여주세요
+        cat.html -> cat.html?category=cat ->
+        고양이 보여주세요
+        bird.html -> bird.html?category=bird ->
+        새 보여주세요
+    */ 
+
