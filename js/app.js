@@ -10,6 +10,34 @@ fetch('https://raw.githubusercontent.com/csslick/animal-mobile/main/animal-data.
     });
 
 function showanimals(obj) {
+// URL parameter(매개변수)
+const query = location.search;
+console.log(query);
+// ? URL query문을 object(변수)로 변경
+let params = new URLSearchParams(query).get('category');
+console.log(params);
+
+// params == null 이면 시작 페이지 dog 출력
+if(params == null) {
+    params = 'dog'
+}
+
+let string = `category=cat`;    // 문자열
+let category = "cat";   // 변수형
+
+/*
+    파라미터를 전달하여 요청하기
+    홈페이지주소name = 홍길동
+        매개변수(URL parameter) name = '홍길동'
+
+    index.html -> index.html?category=dog -> 
+    강아지 보여주세요
+    cat.html -> cat.html?category=cat ->
+    고양이 보여주세요
+    bird.html -> bird.html?category=bird ->
+    새 보여주세요
+*/ 
+
 // forEach() 반복문 = if반복문보다 간단함
 obj.forEach(function(animal){
     // 카테고리 구분 dog | cat | bird
@@ -29,27 +57,4 @@ obj.forEach(function(animal){
     
 });
 };
-
-// URL parameter(매개변수)
-const query = location.search;
-console.log(query);
-// ? URL query문을 object(변수)로 변경
-const params = new URLSearchParams(query).get('category');
-console.log(params);
-
-let string = `category=cat`;    // 문자열
-let category = "cat";   // 변수형
-
-/*
-    파라미터를 전달하여 요청하기
-    홈페이지주소name = 홍길동
-        매개변수(URL parameter) name = '홍길동'
-
-    index.html -> index.html?category=dog -> 
-    강아지 보여주세요
-    cat.html -> cat.html?category=cat ->
-    고양이 보여주세요
-    bird.html -> bird.html?category=bird ->
-    새 보여주세요
-*/ 
 
